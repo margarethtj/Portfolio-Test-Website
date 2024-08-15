@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+    <title>UTS TEKNOLOGI WEB</title>
+  </head>
+
+  <body>
+    <div class="container-navbar">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+            <div class="container-fluid">
+                <!-- Tulisan Teknologi Web -->
+                <div class="col-lg-3">
+                    <a class="navbar-brand text-light fw-bold" href="uts2023.html">TEKNOLOGI WEBSITE</a>
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
+                </div>
+
+                <div class="col-lg-6"></div>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills col-lg-4">
+                    <li class="nav-item" onclick="changeNavColor(1)">
+                      <a class="nav-link" href="#portfolio" id="navPortfolio" style="color:white;">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item" onclick="changeNavColor(2)">
+                      <a class="nav-link" href="#about" id="navAbout" style="color:white;">ABOUT</a>
+                    </li>
+                    <li class="nav-item" onclick="changeNavColor(3)">
+                      <a class="nav-link" href="#contact" id="navContact" style="color:white;">CONTACT</a>
+                    </li>
+                  </ul>
+                
+                <!-- Tab panes -->
+                <!-- <div class="tab-content">
+                    <div class="tab-pane" id="portfolio" role="tabpanel" aria-labelledby="portfolio" tabindex="0">PORTFOLIO</div>
+                    <div class="tab-pane" id="about" role="tabpanel" aria-labelledby="about" tabindex="0">ABOUT</div>
+                    <div class="tab-pane" id="contact" role="tabpanel" aria-labelledby="contact" tabindex="0">CONTACT</div>
+                </div> -->
+            </div>
+        </nav>
+    </div>
+
+    <!-- Homepage -->
+    <div class="container-homepage bg-info text-center" id="homepage">
+         <!-- memasukkan gambar foto profil -->
+        <div class="row-profil col-12 pt-5">
+            <img src="profil.png" width="200px">
+        </div>
+
+        <!-- memasukkan tulisan uts teknologi website -->
+        <div class="row title">
+            <h1 class="col-12 text-light fw-bold display-5">UTS TEKNOLOGI WEBSITE</h1>
+        </div>
+        
+        <!-- memasukkan gambar starline -->
+        <div class="row-logo col-12">
+            <img src="starline.png" width="200px">
+        </div>
+
+        <!-- memasukkan tulisan subtitle -->
+        <div class="row subtitle pb-5">
+            <h5 class="col-12 text-light fw-bold">HTML - Bootstraps - JavaScript</h5>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="container-portfolio bg-white text-center" id="portfolio">
+        <!-- memasukkan tulisan portfolio -->
+        <div class="row title">
+            <h1 class="col-12 text-primary fw-bold display-5 mt-5">PORTFOLIO</h1>
+        </div>
+
+        <!-- memasukkan gambar starline -->
+        <div class="row-logo col-12">
+            <img src="starline.png" width="200px">
+        </div>
+
+        <!-- memasukkan gambar" card nya -->
+        <div class="container-lg my-5">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-rumah" id="rumah" onclick="penjelasan(1)">
+                        <button type="button" class="btn btn-danger btnAdd mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#modalPortfolio" >
+                            <img src="rumah.png" class="card-img-top" width="1px">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-kue" id="kue" onclick="penjelasan(2)">
+                        <button type="button" class="btn btn-info btnAdd mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#modalPortfolio" >
+                            <img src="kue.png" class="card-img-top" width="1px">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-karnival" id="karnival" onclick="penjelasan(3)">
+                        <button type="button" class="btn btn-dark btnAdd mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#modalPortfolio" >
+                            <img src="karnival.png" class="card-img-top">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-4">
+                    <div class="card-game" id="game" onclick="penjelasan(4)">
+                        <button type="button" class="btn btn-info btnAdd mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#modalPortfolio" >
+                            <img src="game.png" class="card-img-top" width="1px">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-bank" id="bank" onclick="penjelasan(5)">
+                        <button type="button" class="btn btn-primary btnAdd mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#modalPortfolio" >
+                            <img src="bank.png" class="card-img-top" width="1px">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-ship" id="ship" onclick="penjelasan(6)">
+                        <button type="button" class="btn btn-secondary btnAdd mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#modalPortfolio" >
+                            <img src="ship.png" class="card-img-top" width="1px">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Modal -->
+             <div class="modal fade text-center" id="modalPortfolio" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <div class="titleModalPortfolio col-12">
+                                <h5 class="modal-title display-6 fw-bold center" id="portfolioModaltitle" style="text-align: center;">LOG CABIN</h5>
+                            </div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                            <!-- Gambar starline -->
+                            <div class="starline col-12">
+                                <img src="starline.png" class="img-fluid" style="width: 100">
+                            </div>
+
+                            <!-- Gambar Card -->
+                            <div class="modalImage" id="gambarCard"></div>
+
+                            <!-- Penjelasan -->
+                            <div class="modalPenjelasan" id="penjelasannya">halo semua</div>
+                        </div>
+
+                        <!-- Footer -->
+                         <div class="modal-footer center col-12">
+                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">X Close Window</button>
+                         </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="container-about bg-info text-center" id="about">
+        <!-- memasukkan tulisan portfolio -->
+        <div class="row title">
+            <h1 class="col-12 text-light fw-bold display-5 mt-5">ABOUT</h1>
+        </div>
+
+        <!-- memasukkan gambar starline -->
+        <div class="row-logo col-12">
+            <img src="starline.png" width="200px">
+        </div>
+
+        <!-- memasukkan text" nya -->
+        <div class="container-lg my-5">
+            <div class="row pb-5">
+                <div class="col-2"></div>
+                <!-- Tulisan Web Teknologi-->
+                <div class="col-4">
+                    <p>Web Techonology refers to the various tools and techniques that are utilized in the process of communication between different typed of devices over the Internet. A web browser is used to access web pages.</p>
+                </div>
+                <!-- Tulisan Web Browser -->
+                <div class="col-4">
+                    <p>Web browsers can be defined as programs that display text, data, pictures, animation, and video on the Internet. Hyperlinked resources on the World Wide Web can be accessed using software interfaces provided by Web browsers.</p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="container-contact bg-white text-center" id="contact">
+        <!-- memasukkan tulisan portfolio -->
+        <div class="row title">
+            <h1 class="col-12 text-primary fw-bold display-5 mt-5">CONTACT ME</h1>
+        </div>
+
+        <!-- memasukkan gambar starline -->
+        <div class="row-logo col-12">
+            <img src="starline.png" width="200px">
+        </div>
+
+        <!-- Container untuk Modal -->
+        <div class="container mt-3">
+            <!-- Container untuk tampilan card hasil -->
+            <div class="card-container">
+                <div class="row" id="cardContainer"></div>
+            </div>
+
+            <!-- Button Contact untuk memunculkan Modal -->
+            <button type="button" class="btn btn-info btnAdd mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal" >Contact !</button>
+            
+            <!-- Modal Add Note -->
+            <div class="modal fade text-start" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header bg-info text-dark fw-bold">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <form>
+                    <!-- Title -->
+                    <div class="mb-3">
+                        <label for="text" class="col-form-label fw-bold">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Message Title">
+                    </div>
+                    <!-- Notes -->
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label fw-bold">Message</label>
+                        <textarea class="form-control" id="notes" placeholder="Message Notes"></textarea>
+                    </div>
+                    <!-- Color -->
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label fw-bold">Color</label>
+                        <select class="form-select" id="color" aria-label="Pilih Warna">
+                        <option value="" disabled selected>Pilih Warna</option>
+                        <option value="warning">Yellow</option>
+                        <option value="success">Green</option>
+                        <option value="primary">Blue</option>
+                        <option value="danger">Red</option>
+                        <option value="light">White</option>
+                        <option value ="dark">Hitam</option>
+                        </select>
+                    </div>
+                    </form>
+                </div>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-info text-end" data-bs-dismiss="modal" id="add">Send message</button>
+                </div>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Modal Edit -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Message !</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <form>
+                    <!-- Title -->
+                    <div class="mb-3">
+                        <label for="text" class="col-form-label fw-bold">Title</label>
+                        <input type="text" class="form-control" id="titleedit" placeholder="Message Title"/>
+                    </div>
+                    <!-- Notes -->
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label fw-bold">Message</label>
+                        <textarea class="form-control" id="notesedit" placeholder="Message Notes"></textarea>
+                    </div>
+                    <!-- Color -->
+                    <div class="mb-3">
+                        <label for="message-text" class="csol-form-label fw-bold">Color</label>
+                        <select class="form-select" id="coloredit" aria-label="Pilih Warna">
+                        <option value="" disabled selected>Pilih Warna</option>
+                        <option value="warning">Yellow</option>
+                        <option value="success">Green</option>
+                        <option value="primary">Blue</option>
+                        <option value="danger">Red</option>
+                        <option value="light">White</option>
+                        <option value ="dark">Hitam</option>
+                        </select>
+                    </div>
+                    </form>
+                </div>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-info text-end" id="edit" data-bs-dismiss="modal" >Edit</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact information yang bagian biru -->
+    <div class="container-information bg-dark text-center" id="information">
+        <div class="row">
+            <!-- Bagian Location -->
+            <div class="col-4">
+                <div class="row title">
+                    <h5 class="col-12 text-light fw-bold mt-5">LOCATION</h5>
+                    <p class="text-light">Petra Christian University<br>Jl.Siwalankerto No.121-131,<br>Siwalankerto, Kec. Wonocolo, Surabaya,<br>Jawa Timur 60236</p>
+                </div>
+            </div>
+
+            <!-- Bagian Around The Web -->
+            <div class="col-4">
+                <div class="row title">
+                    <h5 class="col-12 text-light fw-bold mt-5">AROUND THE WEB</h5>
+                    <p class="text-light">
+                        linkedin : Margareth Tjandra<br>
+                        facebook : Margareth Tjandra<br>
+                        instagram : @margarethtj_<br>
+                        telephone : 081234567890
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bagian About Web Technology -->
+            <div class="col-4">
+                <div class="row title">
+                    <h5 class="col-12 text-light fw-bold mt-5">AROUND WEB TECHNOLOGY</h5>
+                    <p class="text-light">The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Here you'll find links to our <a class="link-opacity-100" href="#">Web technology</a> documentation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function changeNavColor(el){
+            if(el == 1) {
+                document.getElementById("navPortfolio").style.backgroundColor = "blue";
+                document.getElementById("navAbout").style.backgroundColor = "";
+                document.getElementById("navContact").style.backgroundColor = "";
+            }
+            else if(el == 2) {
+                document.getElementById("navPortfolio").style.backgroundColor = "";
+                document.getElementById("navAbout").style.backgroundColor = "blue";
+                document.getElementById("navContact").style.backgroundColor = "";
+            }
+            else {
+                document.getElementById("navPortfolio").style.backgroundColor = "";
+                document.getElementById("navAbout").style.backgroundColor = "";
+                document.getElementById("navContact").style.backgroundColor = "blue";
+            }
+        }
+
+        function penjelasan(kartu) {
+            if(kartu == 1) {
+                document.getElementById("portfolioModaltitle").innerHTML = "RUMAH"
+                document.getElementById("penjelasannya").innerHTML = "ini adalah kartu rumah yang bagus";
+                document.getElementById("gambarCard").innerHTML = '<img src="rumah.png" class="img-fluid" style="width: 300px; background-color: red;">';
+            }
+            else if(kartu == 2) {
+                document.getElementById("portfolioModaltitle").innerHTML = "KUE ULANG TAHUN"
+                document.getElementById("penjelasannya").innerHTML = "ini adalah kartu kue ulang tahun yang enak";
+                document.getElementById("gambarCard").innerHTML = '<img src="kue.png" class="img-fluid" style="width: 300px; background-color: lightblue;">';
+            }
+            else if(kartu == 3) {
+                document.getElementById("portfolioModaltitle").innerHTML = "KARNIVAL"
+                document.getElementById("penjelasannya").innerHTML = "ini adalah kartu karnival untuk merayakan ulang tahunku";
+                document.getElementById("gambarCard").innerHTML = '<img src="karnival.png" class="img-fluid" style="width: 300px; background-color: black;">';
+            }
+            else if(kartu == 4) {
+                document.getElementById("portfolioModaltitle").innerHTML = "GAME"
+                document.getElementById("penjelasannya").innerHTML = "ini adalah kartu game yang sangat seru";
+                document.getElementById("gambarCard").innerHTML = '<img src="game.png" class="img-fluid" style="width: 300px; background-color: lightblue;">';
+            }
+            else if(kartu == 5) {
+                document.getElementById("portfolioModaltitle").innerHTML = "BANK"
+                document.getElementById("penjelasannya").innerHTML = "ini adalah kartu bank untuk menabung";
+                document.getElementById("gambarCard").innerHTML = '<img src="bank.png" class="img-fluid" style="width: 300px; background-color: blue;">';
+            }
+            else {
+                document.getElementById("portfolioModaltitle").innerHTML = "SHIP - PERAHU"
+                document.getElementById("penjelasannya").innerHTML = "ini adalah kartu ship untuk berlayar ke mana-mana";
+                document.getElementById("gambarCard").innerHTML = '<img src="ship.png" class="img-fluid" style="width: 300px; background-color: gray;">';
+            }
+        }
+
+        listCard = [];
+        let counter = 0;
+        let edit = 0;
+
+        // function untuk edit note
+        let editNotes = (index) => {
+          $("#titleedit").val(listCard[index].title);
+          $("#notesedit").val(listCard[index].notes);
+          $("#coloredit").val(listCard[index].color);
+          ind = index;
+        };
+  
+        // function untuk delete notes di list card
+        let deleteNotes = (index) => {
+          listCard.splice(index, 1);
+          addNotes(); // diupdate lagi untuk tampilannya
+        };
+  
+        // function untuk menambah notes
+        let addNotes = () => {
+        let cardResult = "";
+          listCard.forEach((elm, i) => {
+            cardResult +=
+              '<div class="col-lg-2 col-md-3 col-sm-6 mt-3" style="margin-left: 20px;">' + 
+                '<div class="card bg-' + listCard[i].color + '">' + // background card sesuai dengan color yang dipilih
+                  // header
+                  '<div class="card-header">' + 
+                    // Button X
+                    '<button style="text-align: right" onclick="deleteNotes(' + i + ')" type="button" class="btn-close close float-end"></button>' + 
+                    // Title
+                    "<h5>" + listCard[i].title + "</h5>" + 
+                  "</div>" +
+  
+                  // body
+                  '<div class="card-body" data-bs-toggle="modal" data-bs-target="#exampleModal2" onclick="editNotes(' + i + ')">' +
+                    // Notes
+                    "<p>" + listCard[i].notes + "</p>" +
+                  "</div>" +
+                "</div>" +
+              "</div>";
+            });
+          // masukkan hasil card ke container/tampilan
+          $("#cardContainer").html(cardResult);
+        };;
+  
+        // menjalankan programnya
+        $(document).ready(function(){
+          // memasukkan card" awal ke dalam list card
+          // ketika add diklik
+          $("#add").click(function (e) {
+            // mencegah reload ketika form di submit
+            e.preventDefault();
+            // memasukkan data dari inputan
+            let title = $("#title").val();
+            let notes = $("#notes").val();
+            let color = $("#color").val();
+            // increment counter dan masukkan ke dalam array listcard
+            counter++;
+            listCard.push({
+              title: title,
+              notes: notes,
+              color: color,
+            });
+            // menampilkan pesan eror jika terjadi eror
+            console.log(listCard);
+            // masukkan array listcard ke dalam tampilan
+            addNotes();
+            // kolom title dan notes di modal isinya direset
+            $("#title").val("");
+            $("#notes").val("");
+          });
+  
+          // ketika edit di klik
+          $("#edit").click(function (e) {
+            e.preventDefault();
+  
+            let title = $("#titleedit").val();
+            let notes = $("#notesedit").val();
+            let color = $("#coloredit").val();
+  
+            listCard[ind].title = title;
+            listCard[ind].notes = notes;
+            listCard[ind].color = color;
+  
+            console.log(listCard);
+            addNotes();
+          });
+        });
+      </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
